@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>River Pollution Monitoring</title>
+    <link rel="stylesheet" href="pollreportstsyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+    <script defer src="pollreports.html"></script>
+</head>
+<body>
+    <div class="river-grid">
+        
+        <div class="river-block" id="ganga">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Varanasiganga.jpg" alt="Ganga River">
+            <div class="green-separator"></div>
+            <div class="river-name">Ganga</div>
+            <div class="info-overlay">
+                <h2>Ganga</h2>
+                <p>Pollutants: Nitrogen, Phosphorus, Lead, Mercury, Cadmium</p>
+                <p>Water Purity: 60%</p>
+                <p>Drinkable: No</p>
+                <canvas id="gangaChart"></canvas>
+            </div>
+        </div>
+
+        <div class="river-block" id="yamuna">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Id9sPTrh-7uRQMrB0CGlUCNLptXqTvfPgQ&s" alt="Yamuna River">
+            <div class="green-separator"></div>
+            <div class="river-name">Yamuna</div>
+            <div class="info-overlay">
+                <h2>Yamuna</h2>
+                <p>Pollutants: Ammonia, Chloride, Fluoride, Mercury, Pesticides</p>
+                <p>Water Purity: 45%</p>
+                <p>Drinkable: No</p>
+                <canvas id="yamunaChart"></canvas>
+            </div>
+        </div>
+
+        <div class="river-block" id="brahmaputra">
+            <img src="https://travellenz.in/wp-content/uploads/2013/08/kk-060aa-e1612849798197-2048x1365.jpg" alt="Brahmaputra River">
+            <div class="green-separator"></div>
+            <div class="river-name">Brahmaputra</div>
+            <div class="info-overlay">
+                <h2>Brahmaputra</h2>
+                <p>Pollutants: Copper, Zinc, Selenium, Lead, Mercury</p>
+                <p>Water Purity: 70%</p>
+                <p>Drinkable: Yes</p>
+                <canvas id="brahmaputraChart"></canvas>
+            </div>
+        </div>
+
+        <div class="river-block" id="godavari">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Godavari_Bridge.jpg" alt="Godavari River">
+            <div class="green-separator"></div>
+            <div class="river-name">Godavari</div>
+            <div class="info-overlay">
+                <h2>Godavari</h2>
+                <p>Pollutants: Pesticides, Fluoride, Iron, Lead, Mercury</p>
+                <p>Water Purity: 55%</p>
+                <p>Drinkable: No</p>
+                <canvas id="godavariChart"></canvas>
+            </div>
+        </div>
+
+        <div class="river-block" id="krishna">
+            <img src="https://img.freepik.com/premium-photo/meandering-krishna-river-valley-cutting-through-rugged-deccan-plateau-maharashtra-india_604472-15587.jpg" alt="Krishna River">
+            <div class="green-separator"></div>
+            <div class="river-name">Krishna</div>
+            <div class="info-overlay">
+                <h2>Krishna</h2>
+                <p>Pollutants: Nitrate, Ammonia, Pesticides, Lead</p>
+                <p>Water Purity: 50%</p>
+                <p>Drinkable: Yes</p>
+                <canvas id="krishnaChart"></canvas>
+            </div>
+        </div>
+
+        <div class="river-block" id="narmada">
+            <img src="https://i.pinimg.com/736x/db/42/6c/db426c69a7ff01456298a4e87df655f4.jpg" alt="Narmada River">
+            <div class="green-separator"></div>
+            <div class="river-name">Narmada</div>
+            <div class="info-overlay">
+                <h2>Narmada</h2>
+                <p>Pollutants: Pesticides, Chlorine, Phosphorus, Lead</p>
+                <p>Water Purity: 65%</p>
+                <p>Drinkable: No</p>
+                <canvas id="narmadaChart"></canvas>
+            </div>
+        </div>
+
+        <div class="river-block" id="cauvery">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9NKz1YTUBp-5WgDUAF9QZsE3Jhs-UIvdojw&s" alt="Cauvery River">
+            <div class="green-separator"></div>
+            <div class="river-name">Cauvery</div>
+            <div class="info-overlay">
+                <h2>Cauvery</h2>
+                <p>Pollutants: Iron, Fluoride, Pesticides, Mercury</p>
+                <p>Water Purity: 45%</p>
+                <p>Drinkable: No</p>
+                <canvas id="cauveryChart"></canvas>
+            </div>
+        </div>
+
+        <div class="river-block" id="tapti">
+            <img src="https://live.staticflickr.com/4083/5183684251_1dafbd94a2_b.jpg" alt="Tapti River">
+            <div class="green-separator"></div>
+            <div class="river-name">Tapti</div>
+            <div class="info-overlay">
+                <h2>Tapti</h2>
+                <p>Pollutants: Chloride, Pesticides, Iron</p>
+                <p>Water Purity: 72%</p>
+                <p>Drinkable: Yes</p>
+                <canvas id="taptiChart"></canvas>
+            </div>
+        </div>
+
+        <div class="river-block" id="sutlej">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/A_view_of_Sutlej_river_Himachal_Pradesh_India_2014.jpg/800px-A_view_of_Sutlej_river_Himachal_Pradesh_India_2014.jpg" alt="Sutlej River">
+            <div class="green-separator"></div>
+            <div class="river-name">Sutlej</div>
+            <div class="info-overlay">
+                <h2>Sutlej</h2>
+                <p>Pollutants: Ammonia, Nitrate, Fluoride, Pesticides</p>
+                <p>Water Purity: 58%</p>
+                <p>Drinkable: No</p>
+                <canvas id="sutlejChart"></canvas>
+            </div>
+        </div>
+
+        <div class="river-block" id="ghaghara">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh6KynMziqrrb-1N2gwi3g7xpaHkgqsmjvWw&s" alt="Ghaghara River">
+            <div class="green-separator"></div>
+            <div class="river-name">Ghaghara</div>
+            <div class="info-overlay">
+                <h2>Ghaghara</h2>
+                <p>Pollutants: Mercury, Lead, Pesticides</p>
+                <p>Water Purity: 64%</p>
+                <p>Drinkable: No</p>
+                <canvas id="ghagharaChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+     <a href="graphicdata.html"> <button class="back-button" onclick="goBack()">Graphical data</button></a>
+    </div>
+</body>
+</html>

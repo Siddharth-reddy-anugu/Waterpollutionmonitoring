@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark theme */
+    color: #FFFFFF;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh; /* Full height of the viewport */
+    background-image: url(''); /* Cinematic background */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* Positioning context for the overlay */
+    margin: 0; /* Ensure no margin is applied */
+}
+
+.hero::before {
+    content: '';
+    position: absolute; /* Position overlay */
+    top: 0; /* Cover the top */
+    left: 0; /* Cover the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.header {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the left */
+    padding: 20px; /* Add padding */
+    position: absolute; /* Position it at the top of the page */
+    top: 20px; /* Adjust as needed for spacing */
+    left: 20px; /* Align to the left */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.home-button {
+    background-color: transparent; /* Transparent background */
+    color: #4CAF50; /* Green text */
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding around text */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.home-button:hover {
+    background-color: #4CAF50; /* Change background on hover */
+    color: #FFFFFF; /* Change text color on hover */
+}
+
+/* Hero Content Styles */
+.hero-content {
+    position: relative; /* Position content above overlay */
+    z-index: 2; /* Ensure content is above the overlay */
+    text-align: center; /* Center text */
+    color: #FFFFFF; /* Text color */
+}
+
+h1 {
+    font-size: 3rem; /* Title size */
+    font-weight: 700; /* Title weight */
+    letter-spacing: 2px; /* Space between letters */
+    text-transform: uppercase; /* Uppercase letters */
+    animation: fadeInUp 1s ease-out; /* Animation */
+}
+
+p {
+    font-size: 1.2rem; /* Paragraph size */
+    margin-top: 20px; /* Space above */
+    opacity: 0.8; /* Slight transparency */
+}
+
+/* CTA Button */
+.cta-btn {
+    display: inline-block; /* Inline block for padding */
+    margin-top: 40px; /* Space above */
+    padding: 12px 30px; /* Padding */
+    background-color: #4CAF50; /* Button color */
+    color: #FFFFFF; /* Text color */
+    border-radius: 25px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease; /* Transition for hover */
+}
+
+.cta-btn:hover {
+    background-color: #66BB6A; /* Change color on hover */
+}
+
+/* Features Section */
+.features-section {
+    display: flex; /* Flexbox layout */
+    justify-content: space-around; /* Space items evenly */
+    padding: 50px; /* Padding around the section */
+    background-color: #1A1A1A; /* Background color */
+    color: #FFFFFF; /* Text color */
+}
+
+/* Feature Block Styles */
+.feature-block {
+    background-color: #292929; /* Background color */
+    padding: 30px; /* Padding */
+    width: 300px; /* Fixed width */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Shadow */
+    margin: 20px; /* Space between items */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition effects */
+    text-align: center; /* Center text */
+    display: flex; /* Make feature block a flex container */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space children evenly */
+}
+
+.feature-block:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    background-color: #333333; /* Change background on hover */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateY(20px); /* Start lower */
+    }
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to position */
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .features-section {
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center items */
+    }
+
+    .feature-block {
+        width: 90%; /* Full width on small screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Smaller title */
+    }
+
+    p {
+        font-size: 1rem; /* Smaller text */
+    }
+}

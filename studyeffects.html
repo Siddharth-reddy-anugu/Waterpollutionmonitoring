@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Effects of Water Pollution on Ecosystems</title>
+    <link rel="stylesheet" href="studyeffectsstyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js library -->
+</head>
+<body>
+    <header>
+        <div class="hero-section">
+            <h1>Effects of Water Pollution on Ecosystems</h1>
+            <p>Discover how water pollution impacts the delicate balance of ecosystems.</p>
+        </div>
+    </header>
+
+    <section class="info-section">
+        <h2>Effects of Water Pollution</h2>
+        <p>Water pollution has a profound impact on ecosystems, affecting both aquatic and terrestrial life. Here are some key effects:</p>
+
+        <h3>1. Loss of Biodiversity</h3>
+        <p>Polluted water bodies often lead to the extinction of species. Aquatic life, including fish, amphibians, and plants, suffers greatly from toxic pollutants.</p>
+        <img src="https://www.airowater.com/products/wp-content/uploads/2021/08/shutterstock_1425076076-small-1200x480-1.jpg" alt="Loss of Biodiversity" class="effect-image">
+
+        <h3>2. Eutrophication</h3>
+        <p>The introduction of excess nutrients into water bodies leads to algal blooms, which consume oxygen and block sunlight, severely affecting aquatic plants and animals.</p>
+        <img src="https://www.graygroupintl.com/hubfs/Gray%20Group%20International/GGI%20-%20Approved%20and%20Converted%20%28WebP%29/Water%20Pollution%20A%20Threat%20to%20Ecosystems%20and%20Human%20Health.webp" alt="Eutrophication" class="effect-image">
+
+        <h3>3. Health Hazards</h3>
+        <p>Contaminated water can pose serious health risks to wildlife and humans alike, leading to diseases and potential outbreaks.</p>
+        <img src="https://ritewater.in/wp-content/uploads/2024/01/Jan-Blog-Option-1-1.jpg" class="effect-image">
+
+        <h3>4. Habitat Destruction</h3>
+        <p>Pollution can destroy habitats such as coral reefs and wetlands, which are vital for various species.</p>
+        <img src="https://www.nrdc.org/sites/default/files/styles/social_sharing_1200x630/public/media-uploads/guide_waterpollution_66615937_2400.jpg?h=0289cdca&itok=TVVqCgrT" alt="Habitat Destruction" class="effect-image">
+
+        <h3>5. Impact on Food Chains</h3>
+        <p>Water pollution disrupts food chains, leading to the decline of species and affecting the entire ecosystem.</p>
+        <img src="https://www.researchgate.net/publication/323927301/figure/fig3/AS:606805566693377@1521685129387/Microplastic-pollution-in-aquatic-environments-and-impacts-on-food-chains-3.png" alt="Impact on Food Chains" class="effect-image">
+    </section>
+
+    <section class="charts-section">
+        <h2>Water Pollution Data Visualizations</h2>
+
+        <!-- Line Graph for Ecosystem Health Over Time -->
+        <div class="chart-container">
+            <h3>Ecosystem Health Over Time (Line Graph)</h3>
+            <canvas id="ecosystemLineGraph"></canvas>
+        </div>
+    </section>
+
+    <!-- Line Graph Script -->
+    <script>
+        const ctxLine = document.getElementById('ecosystemLineGraph').getContext('2d');
+        const ecosystemLineGraph = new Chart(ctxLine, {
+            type: 'line',
+            data: {
+                labels: ['2018', '2019', '2020', '2021', '2022'], // Years
+                datasets: [{
+                    label: 'Ecosystem Health Index',
+                    data: [80, 70, 60, 50, 40], // Example health index data over the years
+                    borderColor: '#36A2EB',
+                    fill: false,
+                    tension: 0.1,
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100, // Ensure the y-axis is percentage-based
+                        title: {
+                            display: true,
+                            text: 'Health Index (0-100)',
+                            color: '#f0f0f0',
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year',
+                            color: '#f0f0f0',
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#f0f0f0',
+                        }
+                    },
+                }
+            }
+        });
+    </script>
+    <a href="study.html" class="back-home-button">Back to Study</a>
+</body>
+</html>

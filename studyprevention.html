@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prevention and Solutions of Water Pollution</title>
+    <link rel="stylesheet" href="studypreventionstyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js library -->
+</head>
+<body>
+    <header>
+        <div class="hero-section">
+            <h1>Prevention and Solutions of Water Pollution</h1>
+            <p>Learn effective methods to prevent water pollution and protect our water resources.</p>
+        </div>
+    </header>
+
+    <section class="info-section">
+        <h2>Prevention and Solutions</h2>
+        <p>Water pollution can be mitigated through various prevention strategies and solutions. Here are some effective methods:</p>
+
+        <h3>1. Wastewater Treatment</h3>
+        <p>Proper treatment of wastewater before it is discharged into water bodies is crucial. Treatment plants can remove harmful substances and pollutants, ensuring cleaner water.</p>
+        <img src="https://www.nobrokerhood.com/blog/wp-content/uploads/2024/01/Sewage-Treatment-PlantSTP.jpg" alt="Wastewater Treatment" class="solution-image">
+
+        <h3>2. Reducing Plastic Use</h3>
+        <p>Limiting the use of single-use plastics can significantly reduce plastic pollution in water bodies. Promote reusable bags, bottles, and containers.</p>
+        <img src="https://imgnew.outlookindia.com/uploadimage/library/16_9/16_9_2/IMAGE_1700100233.webp?w=801&auto=format%2Ccompress&fit=max&format=webp&dpr=1.0" alt="Reducing Plastic Use" class="solution-image">
+
+        <h3>3. Sustainable Agriculture</h3>
+        <p>Implementing sustainable farming practices can minimize agricultural runoff. Using organic fertilizers and crop rotation can help maintain soil health and reduce pollution.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjIgYh5Reoj8vIKYSz-PT7Zce4dTaFU5Ztng&s" alt="Sustainable Agriculture" class="solution-image">
+
+        <h3>4. Community Awareness</h3>
+        <p>Raising awareness in communities about the importance of clean water can lead to better practices and advocacy for environmental protection.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo9jMfy0AdiK_Ygum9zUuSeQO-3T5f2cULRw&s" alt="Community Awareness" class="solution-image">
+
+        <h3>5. Government Regulations</h3>
+        <p>Implementing strict regulations on waste disposal and pollution controls can lead to significant improvements in water quality.</p>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240620123255/Water-Pollution-in-India.webp" alt="Government Regulations" class="solution-image">
+    </section>
+
+    <section class="charts-section">
+        <h2>Water Pollution Prevention Data Visualizations</h2>
+
+        <!-- Area Chart for Prevention Solutions Effectiveness -->
+        <div class="chart-container">
+            <h3>Effectiveness of Prevention Solutions Over Time (Area Chart)</h3>
+            <canvas id="preventionAreaChart"></canvas>
+        </div>
+    </section>
+
+    <!-- Area Chart Script -->
+    <script>
+        const ctxArea = document.getElementById('preventionAreaChart').getContext('2d');
+        const preventionAreaChart = new Chart(ctxArea, {
+            type: 'line', // Use line chart type for area chart
+            data: {
+                labels: ['2019', '2020', '2021', '2022', '2023'], // Example years
+                datasets: [{
+                    label: 'Effectiveness Score',
+                    data: [70, 75, 80, 85, 90], // Example effectiveness scores over time
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)', // Light area color
+                    borderColor: 'rgba(75, 192, 192, 1)', // Border color
+                    borderWidth: 2,
+                    fill: true // Enables the area under the line
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100, // Ensure the y-axis is percentage-based
+                        title: {
+                            display: true,
+                            text: 'Effectiveness Score',
+                            color: '#f0f0f0',
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Years',
+                            color: '#f0f0f0',
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#f0f0f0',
+                        }
+                    },
+                }
+            }
+        });
+    </script>
+    <a href="study.html" class="back-home-button">Back to Study</a>
+</body>
+</html>

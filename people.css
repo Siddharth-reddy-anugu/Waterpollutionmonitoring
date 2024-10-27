@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.get-back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: 2px solid #4CAF50;
+    padding: 10px 20px;
+    color: #4CAF50;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.get-back-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.title {
+    margin: 50px 0 30px;
+}
+
+.report-title {
+    font-size: 2.5rem;
+    color: #4CAF50;
+   
+    letter-spacing: 2px;
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px 50px;
+}
+
+.report-block {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.report-block:hover {
+    transform: scale(1.05);
+}
+
+.report-block img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.report-info {
+    margin-top: 20px;
+}
+
+.report-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+.state{
+    font-size: 1rem;
+    color: #BBBBBB;
+}
+
+
+.report-details {
+    font-size: 1rem;
+    color: #BBBBBB;
+}
+
+.community-report-button {
+    background-color: transparent;
+    border: 2px solid #4CAF50;
+    padding: 15px 30px;
+    color: #4CAF50;
+    cursor: pointer;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    transition: 0.3s ease;
+}
+
+.community-report-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .report-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Causes of Water Pollution</title>
+    <link rel="stylesheet" href="studycausesstyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js library -->
+</head>
+<body>
+    <header>
+        
+        <div class="hero-section">
+            <h1>Causes of Water Pollution</h1>
+            <p>Explore the major contributors to water pollution and how they affect ecosystems.</p>
+        </div>
+    </header>
+
+    <section class="info-section">
+        <h2>Causes of Water Pollution</h2>
+        <p>Water pollution is primarily caused by human activities that introduce harmful substances into water bodies. Below are the major sources of water pollution:</p>
+
+        <h3>1. Industrial Waste</h3>
+        <p>Industries often discharge pollutants directly into nearby water sources. Chemicals, heavy metals, and toxic waste are some of the harmful substances found in industrial discharge, contaminating water and harming aquatic life.</p>
+
+        <h3>2. Agricultural Runoff</h3>
+        <p>Fertilizers, pesticides, and animal waste from farms can wash into water bodies during rainfall, causing nutrient pollution. Excessive nutrients lead to algal blooms, which deplete oxygen levels in water and harm aquatic organisms.</p>
+
+        <h3>3. Plastic Waste</h3>
+        <p>Plastic materials such as bottles, bags, and microplastics enter oceans and rivers, causing severe damage to marine ecosystems. These materials do not decompose easily and pose a threat to marine animals and fish that ingest them.</p>
+
+        <h3>4. Sewage and Wastewater</h3>
+        <p>Untreated or poorly treated sewage often finds its way into rivers and lakes, introducing bacteria, viruses, and chemicals that contaminate water supplies. This leads to diseases and environmental degradation.</p>
+
+        <h3>5. Oil Spills</h3>
+        <p>Oil spills, whether from shipping accidents or offshore drilling, cause long-term environmental damage. Oil forms a layer on the water’s surface, suffocating marine life and contaminating coastlines.</p>
+    </section>
+
+    <section class="charts-section">
+        <h2>Water Pollution Data Visualizations</h2>
+
+        <!-- Pie Chart for Causes of Water Pollution -->
+        <div class="chart-container">
+            <h3>Causes of Water Pollution (Pie Chart)</h3>
+            <canvas id="pollutionPieChart"></canvas>
+        </div>
+
+        <!-- Bar Graph for Regional Pollution Levels -->
+        <div class="chart-container">
+            <h3>Water Pollution by Region (Bar Graph)</h3>
+            <canvas id="pollutionBarGraph"></canvas>
+        </div>
+        <a href="study.html" class="back-home-button">Back to Study</a>
+
+    </section>
+
+    
+
+    <!-- Pie Chart Script -->
+    <script>
+        const ctxPie = document.getElementById('pollutionPieChart').getContext('2d');
+        const pollutionPieChart = new Chart(ctxPie, {
+            type: 'pie',
+            data: {
+                labels: ['Industrial Waste', 'Agricultural Runoff', 'Plastic Waste', 'Sewage and Wastewater', 'Oil Spills'],
+                datasets: [{
+                    data: [35, 25, 20, 15, 5], // Example data for different causes
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    </script>
+
+    <!-- Bar Graph Script -->
+    <script>
+        const ctxBar = document.getElementById('pollutionBarGraph').getContext('2d');
+        const pollutionBarGraph = new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['North America', 'Europe', 'Asia', 'Africa', 'Australia'],
+                datasets: [{
+                    label: 'Pollution Levels (in %)',
+                    data: [70, 60, 85, 40, 50], // Example data values for pollution levels by region
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100 // Ensure the y-axis is percentage-based
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
